@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StaminaProgram</title>
     <!--icono -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/dfcffc1f52.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="./stamina.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -15,71 +17,99 @@
 
     <header class="colorHeaderPrincipal">
         <div class=" contenedorLogo">
-          <a href="index.html"><img class="logo" src="./assets/img/logo 2.jpeg" alt="logo"></a>
-        </div>
+          <a href="index.html"><img class="logo" src="./assets/img/logo 2.jpeg" alt="logo"></a> </div>
         <div class="miniTitulo">  <h2 >STAMINAPROGRAM</h2></div>
-          
-    
-        <nav class="Navegacion">
-            <!--MENU DEL HEADER-->
-            <nav>
-                <li class="listaNavegacion"  >
-                    <a class="linkNav" href="#">Inicio</a>
-                
-                    <a class="linkNav" href="page/atletas.html">Atletas</a>
-                
-                    <a class="linkNav" href="page/staff.html">Staff</a>
-               
-                    <a class="linkNav" href="page/planificacion.html">Planificacion</a>
-                
-                    <a class="linkNav" href="page/contacto.html">Contacto</a>
-                </li>
 
-        </nav>
+            <div class="container-fluid listaNavegacion">
+                <div class="row">
+                  <div class="col-lg-12 col-xs-12">
+                    <nav class="navbar navbar-expand-lg  navbar-light colorNav">
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon "></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class=" navList navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-around ">
+                            <li class="nav-item active">
+                            <a class="linkNav" href="#">Inicio <span class="sr-only">(current)</span></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="linkNav" href="page/atletas.html">Atletas</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="linkNav" href="page/staff.html">Staff</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="linkNav" href="page/planificacion.html">Planificacion</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="linkNav" href="page/contacto.html">Contacto</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </nav>
+                  </div>
+                </div>
+              </div>
     </header>
 
     <main class="fondoMain">  
 
-        <section >
+        <section class="tituloYParrafo" >
             
     <h1 class="h1Index">SUPERA TUS LIMITES</h1>
   
             <p class="parrafoMain">Sumate a nuestra comunidad y empeza a entrenar como los mejores. 
                 Concentrate en entrenar, nosotros nos ocupamos del resto.</p>
-        </section>
-        <section>
-    
 
-        <!--ACA VA OTRA IMAGEN A LO ANCHO-->
-            <h2 class="h2Stamina">STAMINA</h2>
-<P class="staminaDefinicion">
-    Es la capacidad de soportar esfuerzos físicos, mentales y espirituales ante la aparición de la fatiga, sin tener que frenar antes de llegar al objetivo. 
-    • Desde un punto fisiológico puede tomarse como el aumento del desarrollo tanto de la fuerza como de la resistencia.
-    • Nuestro objetivo como programa es mejorar tu capacidad de permanecer más enfocado y conectado ante las diferentes situaciones de entrenamiento.
+    <div class="segundoParrafo">
+
+        <h2 class="h2Stamina">STAMINA</h2>
+        <P class="staminaDefinicion">
+            Es la capacidad de soportar esfuerzos físicos, mentales y espirituales ante la aparición de la fatiga, sin tener que frenar antes de llegar al objetivo. 
+           <p class="staminaDefinicion">• Desde un punto fisiológico puede tomarse como el aumento del desarrollo tanto de la fuerza como de la resistencia.</p> 
+           <p class="staminaDefinicion">• Nuestro objetivo como programa es mejorar tu capacidad de permanecer más enfocado y conectado ante las diferentes situaciones de entrenamiento.
+           </p> 
+        </P>
+    </div>
+        
 </P>
         </section>
-        <section>
-            <div class="imagenes3">
-            
-                <a href="./page/planificacion.html"><img class="imagen1" src="./assets/img/enseñando.jpg" width="400px" height="400px" alt="coach enseñando a alumno" ></a>
-            
-                <a href="./page/atletas.html"> <img class="imagen2" src="./assets/img/ezebarrasol2.JPG" width="400px" height="400px"alt="atleta con barra"></a>
-                
-                <a href="./page/staff.html"><img class="imagen3" src="./assets/img/IMG_6333.jpg" width="400px" height="400px" alt="atlta con medallas"></a>
         
-    </div>
+        <section>
+            <div class="container contenedorImagenes">
+                <div class=" row imagenes3">
+                  <div class="col">
+                    <a href="./page/planificacion.html"><img class="imagen1" src="./assets/img/enseñando.jpg" width="400px" height="400px" alt="coach enseñando a alumno" ></a>
+                  </div>
+                  <div class="col">
+                    <a href="./page/atletas.html"> <img class="imagen2" src="./assets/img/ezebarrasol2.JPG" width="400px" height="400px"alt="atleta con barra"></a>
+                  </div>
+                  <div class="col">
+                    <a href="./page/staff.html"><img class="imagen3" src="./assets/img/IMG_6333.jpg" width="400px" height="400px" alt="atlta con medallas"></a>
+                    
+                  </div>
+                </div>
+              </div>
 </section>
+
+
 
         <footer class="footerIndex">
 <div class="divFooterIndex">
-        <a href="www.instagram.com">Instagram</a>
-        <a href="www.facebook.com">Facebook</a>
-        <a href="www.twitter.com">Twitter</a>
+   
+     <a href="www.instagram.com"><i class="fa-brands fa-square-instagram"> </i> </a>
 
-        <p>Todos los derechos reservados</p>
+      
+        <a href="www.facebook.com"><i class="fa-brands fa-square-facebook"></i></a>
+
+
+        <a href="www.twitter.com"><i class="fa-brands fa-square-twitter"></i></a>
+
 </div>
 
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>

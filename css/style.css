@@ -18,9 +18,8 @@
     width: 100%;
     height: 100%;
 }
+
 /*estildos del header*/
- body{background-color: rgb(46, 46, 95);} 
-header{background-color: rgb(57, 57, 83);}
 
 /*estilos logo*/
 
@@ -29,28 +28,29 @@ header .contenedorLogo .logo{
     height: 10vh;
 }
 .miniTitulo{
-    text-align: center;
-
-    
+    margin-top: 15px;
+    text-align: center; 
 }
 /*estilos navegacion header*/
-
+   
 .listaNavegacion{
     text-align: right;
     display: inline-block;
    color: beige;
-   padding: 10px 30px;
+   padding:10px 30px;
     list-style: none;
+
     
 }
 
 .linkNav{
-    display: inline-block;
+    display: flex;
+    align-items:start;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
     color: rgb(192, 183, 235);
     font-size: 20px;
-    margin:-1%  20px;
+    margin:-1%  20px auto;
 }
 
 
@@ -58,7 +58,7 @@ header .contenedorLogo .logo{
 
 .colorHeaderPrincipal{
     width: 100%;
-    height: 10vh;
+    height: 10%;
 background-image: url(../assets/img/logo\ stamina.jpeg);
 background-repeat:no-repeat;
 background-size:cover; 
@@ -66,6 +66,8 @@ display:flex;
 overflow-block:visible ; 
 position: fixed;
 }
+
+
 
 .fondoMain{
     height: 100%;
@@ -75,6 +77,9 @@ background-size:cover;
 overflow: hidden;
 }
 
+
+
+
  .h1Index{
     color: aliceblue;
   font-size: 50px;
@@ -82,11 +87,13 @@ overflow: hidden;
     margin: 20px 20px;
     margin-top: 60px;
     margin-bottom: 2px;
+    display: flex;
+    
  }
 
 .parrafoMain{
     color: aliceblue;
-    font-size:large;
+    font-size: 25px;
     line-height: normal;
     text-align:justify;
     margin: 50px 25px;
@@ -96,7 +103,7 @@ overflow: hidden;
 .h2Stamina{
     
     color: rgb(250, 251, 252);
-    font-size:large;
+    font-size:40px;
     line-height: normal;
     text-align:justify;
     margin: 10px 25px;
@@ -109,23 +116,51 @@ overflow: hidden;
     margin: auto;
 }
 
+.imagenes3{
+   display: flex;
+   flex-wrap: nowrap;
+  justify-content: space-around;
+   
+}
+
 .imagen1{
     padding: 10px 20px;
 }
+
+.imagen2{
+    padding: 10px 20px;
+}
+
 
 .imagen3{
     padding: 10px 20px;
 }
 /*estilados del footer*/ 
+footer{
+    bottom: 0;
+        padding: 1em 0;
+}
 
 .footerIndex{
     background-image: url(../assets/img/STAMINA.jpeg);
     background-position: center;
-    height: 20vh;
+    height: 15vh;
     background-repeat: no-repeat;
     background-size: cover;
-    display:flex;
 }
+
+.divFooterIndex{
+display: flex;
+justify-content: space-around;
+    
+}
+
+.divFooterIndex a {
+    color: brown;
+    font-size: 40px;
+    text-decoration: none;
+}
+
 
 
 /*-------------ESTILADO PAGINA DE CONTACTO-------------------------------*/
@@ -169,25 +204,44 @@ overflow: hidden;
   /*estilos staff*/
 
  .seccionStaff{
+    background: rgba(80,69,69,0.56);
+background: linear-gradient(359deg,rgba(80,69,69,0.56) 0%, rgba(11,10,10,0.69) 80%);
+background: -webkit-linear-gradient(359deg,rgba(80,69,69,0.56) 0%, rgba(11,10,10,0.69) 80%);
+background: -moz-linear-gradient(359deg,rgba(80,69,69,0.56) 0%, rgba(11,10,10,0.69) 80%);
+    height: 100vh;
+    width: 90%;
+    display: flex;
+    flex-direction:column;
+    margin: auto;
+    align-items:center;
+    border-radius: 5px;
     color: aliceblue;  
     justify-content: center;
+
+
  }
 
 
 .h1staff{
-    text-align: start;
-    margin-bottom: 50px;
+    color: aliceblue;
+    font-size: 50px;
+    padding: 60px;
+    display: flex;
+    text-align: center;
+      
 }
- .parrafo1Staff{
+ .parrafo1Staff .parrafo2Staff{
     margin-top: 20px;
     margin-left: 10px;
-    text-align: justify;
+    text-align:justify;
+  
     
  }
 
  .fotoCoach{
-    margin:50px 450px;
-image-orientation: center;
+    padding: 10px 20px;
+
+    
 
  }
  .fondoStaff{
@@ -196,6 +250,7 @@ image-orientation: center;
     background-repeat: no-repeat;
     background-size: cover;
  }
+
 
 
 
@@ -223,4 +278,69 @@ image-orientation: center;
     margin: 50px 25px;
     margin-top: 20px;
  }
+
+
+ @media only screen and (min-width: 1024px) {
+	.navbar-expand-lg .navbar-collapse {
+		justify-content: flex-end;
+	}
+ }
+/**version mobile**/
+		
+@media only screen and (max-width: 768px) {
+
+    .colorNav{
+       color: rgba(0, 0, 0, 0.586);
+    }
+
+    .colorHeaderPrincipal{
+        
+height: 11.5%;
+
+    }
+    .listaNavegacion{
+
+        display: block;
+        text-align: right;
+    }
+.navbar{
+    flex-direction: row-reverse;
+    justify-items: left;
+
+    background-image: url(../assets/img/logo\ stamina.jpeg);
+    
+}
+
+.navList{
+    align-items: end;
+    bottom: 0;
+}
+
+
+.h1Index{
+  text-align: center;
+}
+
+.h2Stamina{
+    text-align: center;
+}
+
+
+    .imagenes3 {
+    display: block;
+    margin: 0 auto;
+    padding-left: 4%;
+    width: 100%;
+    }
+   
+
+/* queries pagina ATLETAS */
+
+
+   
+       
+
+   
+}
+
 
