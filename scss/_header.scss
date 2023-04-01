@@ -1,0 +1,84 @@
+
+.colorHeaderPrincipal{
+    width: 100%;
+    height: 10%;
+  background-image: url(../assets/img/logo\ stamina.jpeg);
+  background-repeat:no-repeat;
+  background-size:cover; 
+  display:$contenedor-flex;  
+  overflow-block:visible ; 
+  position: fixed;
+  
+  .contenedorLogo{
+    .logo{
+        width: 70px;
+        height: 10vh;
+
+        }
+    
+     }
+  
+  }
+
+  .listaNavegacion{
+    text-align: right;
+    display: inline-block;
+   color: map-get($colors, items);
+   padding:10px 30px;
+    list-style: none;
+
+    .linkNav{
+        display: $contenedor-flex;
+        align-items:start;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-decoration: none;
+        color: map-get($colors, link);
+        font-size: 20px;
+        margin:-1%  20px auto;
+      }
+  
+    
+  }
+  
+
+  .miniTitulo{
+    margin-top: 15px;
+    text-align: center; 
+  }
+
+
+
+  @media only screen and (max-width: 768px) {
+
+    .colorHeaderPrincipal{
+      
+      height: 11.5%;
+      
+      .colorNav{
+        color: rgba(0, 0, 0, 0.586);
+     } 
+
+     .listaNavegacion{
+
+      display: block;
+      text-align: right;
+  }
+    
+    }
+    .navbar{
+      flex-direction: row-reverse;
+      justify-items: left;
+    
+      background-image: url(../assets/img/logo\ stamina.jpeg);
+      
+    }
+
+    .navList{
+      align-items: end;
+      bottom: 0;
+    }
+    
+
+  }
+
+  
