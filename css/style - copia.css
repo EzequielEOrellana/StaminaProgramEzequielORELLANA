@@ -14,7 +14,7 @@
 
 
 /*----------------------------ESTILADOS DEL INDEX-------------------------------------*/
-.bodyTamaño{
+body{
     width: 100%;
     height: 100%;
 }
@@ -165,13 +165,13 @@ justify-content: space-around;
 
 /*-------------ESTILADO PAGINA DE CONTACTO-------------------------------*/
 
-.colorHeaderContacto{
+/* .colorHeaderContacto{ 
     height: 10vh;
     background-image: url(../assets/img/logo\ stamina.jpeg);
     background-repeat:no-repeat;
     background-size:cover;   
     display: flex; 
-}
+}*/
 
 /*estilo de fondo*/
 
@@ -180,6 +180,11 @@ justify-content: space-around;
     background-image: url(../assets/img/pexels-photo-2261484.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+.formularioUbicacion{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .h1Contacto{
@@ -196,50 +201,44 @@ justify-content: space-around;
 
 
 .formularioConsulta{
+  background-color: rgb(0, 4, 52);
     text-align: left;
     border: 3px solid black;
-    width: 250px;
+    width: 300px;
 }
 
   /*estilos staff*/
-
- .seccionStaff{
-    background: rgba(80,69,69,0.56);
-background: linear-gradient(359deg,rgba(80,69,69,0.56) 0%, rgba(11,10,10,0.69) 80%);
-background: -webkit-linear-gradient(359deg,rgba(80,69,69,0.56) 0%, rgba(11,10,10,0.69) 80%);
-background: -moz-linear-gradient(359deg,rgba(80,69,69,0.56) 0%, rgba(11,10,10,0.69) 80%);
-    height: 100vh;
-    width: 90%;
-    display: flex;
-    flex-direction:column;
-    margin: auto;
-    align-items:center;
-    border-radius: 5px;
-    color: aliceblue;  
-    justify-content: center;
+.textoFoto{
+    background: rgba(27,22,22,0.93);
+background: linear-gradient(88deg,rgba(27,22,22,0.93) 0%, rgba(23,28,39,0.79) 80%);
+background: -webkit-linear-gradient(88deg,rgba(27,22,22,0.93) 0%, rgba(23,28,39,0.79) 80%);
+background: -moz-linear-gradient(88deg,rgba(27,22,22,0.93) 0%, rgba(23,28,39,0.79) 80%);
+    margin: 50px 200px 50px 200px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
 
 
- }
-
+}
 
 .h1staff{
     color: aliceblue;
     font-size: 50px;
     padding: 60px;
-    display: flex;
     text-align: center;
-      
+    
 }
- .parrafo1Staff .parrafo2Staff{
+ .parrafo1Staff {
+    color: aliceblue;
     margin-top: 20px;
     margin-left: 10px;
     text-align:justify;
-  
     
  }
 
+
  .fotoCoach{
-    padding: 10px 20px;
+    padding: 10px 30px ;
 
     
 
@@ -257,27 +256,46 @@ background: -moz-linear-gradient(359deg,rgba(80,69,69,0.56) 0%, rgba(11,10,10,0.
  /*estilos atletas*/
 
 
+/* estilado de Contacto */
+label{
+    color: rgb(249, 32, 32);
+}
 
 
  /*ESTILADO PLANIFICACION*/
+
+ .imagenTexto{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    }
+
+
  .h1Planiicacion{
     color: aliceblue;
-    font-size:large;
-    line-height: normal;
+    font-size:50px;
     text-align:justify;
     margin: 50px 25px;
-    margin-top: 20px; 
+    margin-top: 60px; 
  }
 
 
  .parrafoPlanificacion{
+    background: rgba(27,22,22,0.93);
+background: linear-gradient(88deg,rgba(27,22,22,0.93) 0%, rgba(23,28,39,0.79) 80%);
+background: -webkit-linear-gradient(88deg,rgba(27,22,22,0.93) 0%, rgba(23,28,39,0.79) 80%);
+background: -moz-linear-gradient(88deg,rgba(27,22,22,0.93) 0%, rgba(23,28,39,0.79) 80%);
     color: aliceblue;
     font-size:large;
     line-height: normal;
     text-align:justify;
     margin: 50px 25px;
-    margin-top: 20px;
+    margin-top: 20px;    
  }
+
+ 
 
 
  @media only screen and (min-width: 1024px) {
@@ -334,13 +352,25 @@ height: 11.5%;
     }
    
 
-/* queries pagina ATLETAS */
+/* queries pagina staff */
+.h1staff{
+    margin-top: 30px;
+}
 
-
-   
+.textoFoto{
+    flex-direction: column;
+   margin: 20px 20px 20px 20px;
+}
        
-
+/* queries pagina contacto */
+.formularioUbicacion{
+    flex-direction: column;
+}
    
+/* queries pagina planificacion */
+.imagenTexto{
+    flex-direction: column;
+}
 }
 
 

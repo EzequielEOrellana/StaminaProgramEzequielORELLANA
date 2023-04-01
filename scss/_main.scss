@@ -1,0 +1,174 @@
+.fondoMain{
+    height: 100%;
+  background-image: url(../assets/img/pexels-photo-2261484.jpeg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  overflow: hidden;
+
+.tituloYParrafo{
+
+    .h1Index{
+        color: $color-texto;
+      font-size: 50px;
+        line-height: normal;
+        margin: 20px 20px;
+        margin-top: 60px;
+        margin-bottom: 2px;
+        display: $contenedor-flex;
+        }   
+      }
+
+
+      .h2Stamina{
+  
+        color: map-get($colors, titulo2);
+        font-size:40px;
+        line-height: normal;
+        text-align:justify;
+        margin: 10px 25px;
+      }
+
+}
+
+
+/* main del contacto*/ 
+
+
+.formularioUbicacion{
+    display: $contenedor-flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .formularioConsulta{
+        background-color: rgb(0, 4, 52);
+          text-align: left;
+          border: 3px solid black;
+          width: 300px;
+          
+  .enviar{
+    background-color: #4e4caf95; 
+    border: none; 
+    color: white; 
+    padding: 12px 24px; 
+    text-align: center;
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    margin: 4px 2px; 
+    cursor: pointer; 
+    border-radius: 10px;
+  }
+
+  .enviar:hover {
+    background-color: #0f0126; 
+  }
+  
+  .enviar:active {
+    transform: scale(1.05); 
+   }
+  }
+  }
+
+    
+    
+  
+
+
+
+  label{
+    color: rgb(249, 32, 32);
+  }
+
+
+  /*main del staff*/
+
+
+  .h1staff{
+    color: $color-texto;
+    font-size: 50px;
+    padding: 60px;
+    text-align: center;
+    
+  }
+
+  .textoFoto{
+    background: rgba(27,22,22,0.93);
+  background: linear-gradient(88deg,rgba(27,22,22,0.93) 0%, rgba(23,28,39,0.79) 80%);
+  background: -webkit-linear-gradient(88deg,rgba(27,22,22,0.93) 0%, rgba(23,28,39,0.79) 80%);
+  background: -moz-linear-gradient(88deg,rgba(27,22,22,0.93) 0%, rgba(23,28,39,0.79) 80%);
+    margin: 50px 200px 50px 200px;
+    display:$contenedor-flex;
+    justify-content:center;
+    align-items: center;
+  
+    .parrafo1Staff {
+        color: $color-texto;
+        margin-top: 20px;
+        margin-left: 10px;
+        text-align:justify;     
+      }
+
+      .fotoCoach{
+        padding: 10px 30px ;
+      
+      }
+  
+  }
+
+  /*main de planificacion*/
+
+  .imagenTexto{
+
+    display: $contenedor-flex;
+    justify-content: center;
+    align-items: center;
+
+    .parrafoPlanificacion{
+        background: rgba(27,22,22,0.93);
+      background: linear-gradient(88deg,rgba(27,22,22,0.93) 0%, rgba(23,28,39,0.79) 80%);
+      background: -webkit-linear-gradient(88deg,rgba(27,22,22,0.93) 0%, rgba(23,28,39,0.79) 80%);
+      background: -moz-linear-gradient(88deg,rgba(27,22,22,0.93) 0%, rgba(23,28,39,0.79) 80%);
+        color: $color-texto;
+        font-size:large;
+        line-height: normal;
+        text-align:justify;
+        margin: 50px 25px;
+        margin-top: 20px;    
+      }
+   
+    }
+
+
+    @media only screen and (max-width: 768px) {
+
+      .fondoMain{
+        .tituloYParrafo{
+          .h1Index{
+            text-align: center;
+            }
+
+          .segundoParrafo{
+            .h2Stamina{
+              text-align: center;
+            }
+          }  
+        }
+        .h1staff{
+          margin-top: 30px;
+        }
+      
+        .formularioUbicacion{
+          flex-direction: column;
+        } 
+        .imagenTexto{
+          flex-direction: column;
+          
+        }
+        .textoFoto{
+          flex-direction: column;
+         margin: 20px 20px 20px 20px;
+        }
+      }
+    }
+  
+  
