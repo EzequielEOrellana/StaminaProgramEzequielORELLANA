@@ -1,5 +1,5 @@
-/*ACA VAN TODOS LOS @*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;600&family=Roboto:ital,wght@0,400;1,900&display=swap");
 /*maps*/
 * {
   margin: 0%;
@@ -119,6 +119,8 @@ body {
   margin-top: 60px;
   margin-bottom: 2px;
   display: flex;
+  font-weight: 900;
+  justify-content: center;
 }
 .fondoMain .h2Stamina {
   color: rgb(250, 251, 252);
@@ -170,6 +172,7 @@ label {
   font-size: 50px;
   padding: 60px;
   text-align: center;
+  font-weight: 900;
 }
 
 .textoFoto {
@@ -209,6 +212,48 @@ label {
   margin-top: 20px;
 }
 
+.cards .h1Cards {
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  font-weight: 900;
+}
+.cards .cardsPadre {
+  background-color: rgb(21, 20, 23);
+  display: flex;
+  height: 90vh;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 5px;
+}
+.cards .cardsPadre .cardsHijo {
+  background-color: rgb(0, 0, 0);
+  border: 1px solid rgb(242, 242, 242);
+  width: 30%;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cards .cardsPadre .cardsHijo .imgCards {
+  width: 50%;
+  height: 50%;
+  margin-top: 5%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cards .cardsPadre .cardsHijo .h2Cards {
+  text-align: center;
+  color: aliceblue;
+}
+.cards .cardsPadre .cardsHijo .parrafoCards {
+  margin-bottom: 0%;
+  color: aliceblue;
+}
+
 @media only screen and (max-width: 768px) {
   .fondoMain .tituloYParrafo .h1Index {
     text-align: center;
@@ -228,6 +273,24 @@ label {
   .fondoMain .textoFoto {
     flex-direction: column;
     margin: 20px 20px 20px 20px;
+  }
+  .fondoMain .cards {
+    margin-top: 30px;
+    margin-bottom: 500px;
+  }
+  .fondoMain .cards .h1Cards {
+    align-items: start;
+    margin-bottom: 500px;
+  }
+  .fondoMain .cards .cardsPadre {
+    display: flex;
+    flex-direction: column;
+  }
+  .fondoMain .cards .cardsPadre .cardsHijo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
   }
 }
 .footerIndex {
@@ -258,5 +321,5 @@ label {
   }
 }
 .icon-container i {
-  animation: spin 2s linear infinite;
+  animation: spin 8s linear infinite;
 }/*# sourceMappingURL=style.css.map */

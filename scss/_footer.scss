@@ -1,37 +1,33 @@
-.footerIndex{
+.footerIndex {
+  bottom: 0;
+  padding: 1em 0;
+  background-image: url(../assets/img/STAMINA.jpeg);
+  background-position: center;
+  height: 15vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-    bottom: 0;
-    padding: 1em 0;
-    background-image: url(../assets/img/STAMINA.jpeg);
-    background-position: center;
-    height: 15vh;
-    background-repeat: no-repeat;
-    background-size: cover;
+  .divFooterIndex {
+    display: $contenedor-flex;
+    justify-content: space-around;
 
-    .divFooterIndex{
-        display: $contenedor-flex;
-        justify-content: space-around;
-
-        a {
-            color: map-get($colors, redes);
-            font-size: 40px;
-            text-decoration: none;
-          }
-          
-        }
-  }
-
-
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
+    a {
+      color: map-get($colors, redes);
+      font-size: 40px;
+      text-decoration: none;
     }
   }
-  
-  .icon-container i {
-    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
   }
-  
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.icon-container i {
+  animation: spin 8s linear infinite;
+}
