@@ -192,6 +192,64 @@ label {
   }
 }
 
+
+/*main de planificacion*/ 
+
+.galeria_imagenes{
+ position:relative;
+  cursor:pointer;
+}
+
+.galeria_imagenes2{
+  @extend .galeria_imagenes
+}
+
+.galeria_imagenes3{
+  @extend .galeria_imagenes
+}
+
+.galeria_imagenes4{
+  @extend .galeria_imagenes
+}
+
+
+
+/*pseudo elemento before*/
+.galeria_imagenes::before {
+  content:"El es Ezequiel el cual realiza nuestra Panificacion para atletas que desean competir, desarrollandose como se muestra en la imagen en medio de una competencia en la categoria ADVANCE. ";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-color:#14182ba6;
+  transform: scaleY(0);
+  transition: transform .4s;
+  color:white;
+  display:flex;
+  justify-content: center;
+  align-items:center ;
+  font-size:1.5rem ;
+  text-align: justify;
+  
+}
+
+.galeria_imagenes2::before {
+  content:"El es Gustavo el cual ademas es coach y nos elige para crecer como atleta y mejorar asi sus hbilidades en su entrenamiento diario.";}
+
+.galeria_imagenes3::before{
+  content:"El es Ari el cual realiza nuestra planificacion para Atletas, entrenando de forma individual en el box el del cual forma parte.";}
+
+.galeria_imagenes4::before{
+  content:"Te presentamos a Franco, el realiza un entrenamiento peronalizado en base a su actividad el cual es corredor de cutriciclos y logro ganar el primer puesto en su categoria tras su largo compromiso con la programación.";}
+
+
+.galeria_imagenes:hover::before{
+   transform: scaleY(1);
+}
+
+
+
 @media only screen and (max-width: 768px) {
   .fondoMain {
     .tituloYParrafo {

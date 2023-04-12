@@ -6,8 +6,7 @@
   background-repeat:no-repeat;
   background-size:cover; 
   display:$contenedor-flex;  
-  overflow-block:visible ; 
-  position: fixed;
+  position: absolute;
   
   .contenedorLogo{
     .logo{
@@ -51,17 +50,21 @@
   @media only screen and (max-width: 768px) {
 
     .colorHeaderPrincipal{
-      
+      display: flex;
+      align-items:self-start;
+      justify-content:center;
       height: 11.5%;
+      width: 100%;
       
       .colorNav{
         color: rgba(0, 0, 0, 0.586);
      } 
 
      .listaNavegacion{
+      margin-top: 0%;
+      position: static;
+      
 
-      display: block;
-      text-align: right;
   }
     
     }

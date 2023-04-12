@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;600&family=Roboto:ital,wght@0,400;1,900&display=swap");
 /*maps*/
@@ -38,6 +39,15 @@ body {
 
 .imagen1, .imagen3, .imagen2 {
   padding: 10px 20px;
+  /*transition: transform 0.3s ease-in-out; */
+}
+
+.imagen1_index, .imagen3_index, .imagen2_index {
+  transition: transform 0.3s ease-in-out;
+}
+
+.imagen1_index:hover, .imagen3_index:hover, .imagen2_index:hover {
+  transform: scale(1.1);
 }
 
 @media only screen and (max-width: 768px) {
@@ -53,8 +63,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  overflow-block: visible;
-  position: fixed;
+  position: absolute;
 }
 .colorHeaderPrincipal .contenedorLogo .logo {
   width: 70px;
@@ -85,14 +94,18 @@ body {
 
 @media only screen and (max-width: 768px) {
   .colorHeaderPrincipal {
+    display: flex;
+    align-items: self-start;
+    justify-content: center;
     height: 11.5%;
+    width: 100%;
   }
   .colorHeaderPrincipal .colorNav {
     color: rgba(0, 0, 0, 0.586);
   }
   .colorHeaderPrincipal .listaNavegacion {
-    display: block;
-    text-align: right;
+    margin-top: 0%;
+    position: static;
   }
   .navbar {
     flex-direction: row-reverse;
@@ -254,6 +267,47 @@ label {
   color: aliceblue;
 }
 
+/*main de planificacion*/
+.galeria_imagenes, .galeria_imagenes4, .galeria_imagenes3, .galeria_imagenes2 {
+  position: relative;
+  cursor: pointer;
+}
+
+/*pseudo elemento before*/
+.galeria_imagenes::before, .galeria_imagenes2::before, .galeria_imagenes3::before, .galeria_imagenes4::before {
+  content: "El es Ezequiel el cual realiza nuestra Panificacion para atletas que desean competir, desarrollandose como se muestra en la imagen en medio de una competencia en la categoria ADVANCE. ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(20, 24, 43, 0.6509803922);
+  transform: scaleY(0);
+  transition: transform 0.4s;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+.galeria_imagenes2::before {
+  content: "El es Gustavo el cual ademas es coach y nos elige para crecer como atleta y mejorar asi sus hbilidades en su entrenamiento diario.";
+}
+
+.galeria_imagenes3::before {
+  content: "El es Ari el cual realiza nuestra planificacion para Atletas, entrenando de forma individual en el box el del cual forma parte.";
+}
+
+.galeria_imagenes4::before {
+  content: "Te presentamos a Franco, el realiza un entrenamiento peronalizado en base a su actividad el cual es corredor de cutriciclos y logro ganar el primer puesto en su categoria tras su largo compromiso con la programación.";
+}
+
+.galeria_imagenes:hover::before, .galeria_imagenes2:hover::before, .galeria_imagenes3:hover::before, .galeria_imagenes4:hover::before {
+  transform: scaleY(1);
+}
+
 @media only screen and (max-width: 768px) {
   .fondoMain .tituloYParrafo .h1Index {
     text-align: center;
@@ -296,6 +350,7 @@ label {
 .footerIndex {
   bottom: 0;
   padding: 1em 0;
+  margin-top: 20px;
   background-image: url(../assets/img/STAMINA.jpeg);
   background-position: center;
   height: 15vh;

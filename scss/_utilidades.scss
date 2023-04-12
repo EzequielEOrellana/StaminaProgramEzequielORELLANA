@@ -33,8 +33,27 @@ body{
    
    .imagen1{
      padding: 10px 20px;
+     /*transition: transform 0.3s ease-in-out; */
+   }
+
+   .imagen1_index {
+    transition: transform 0.3s ease-in-out;
+   }
+
+   .imagen1_index:hover{
+    transform: scale(1.1);
    }
    
+   .imagen2_index{
+    @extend .imagen1_index
+   }
+
+   .imagen3_index{
+    @extend .imagen1_index
+   }
+
+  
+
    .imagen2{
      @extend .imagen1;
    }
