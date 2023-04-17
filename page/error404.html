@@ -5,7 +5,15 @@
     <style>
       body {
         font-family: Arial, sans-serif;
-        background-color: #f2f2f2;
+        background-image: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.522),
+            rgba(0, 0, 0, 0.522)
+          ),
+          url(../assets/img/error404.jpg);
+
+        background-size: cover;
+        background-position: center;
       }
 
       .container {
@@ -23,7 +31,8 @@
 
       p {
         font-size: 24px;
-        color: #333;
+        font-weight: 900;
+        color: #fbf6f6;
         margin-bottom: 40px;
       }
 
@@ -43,7 +52,10 @@
     <div class="container">
       <h1>404</h1>
       <p>Oops! La página que buscas no existe.</p>
-      <p>Por favor, vuelve a la <a href="../index.html">página principal</a> e intenta de nuevo.</p>
+      <p>
+        Por favor, vuelve a la <a href="../index.html">página principal</a> e
+        intenta de nuevo.
+      </p>
     </div>
   </body>
 </html>

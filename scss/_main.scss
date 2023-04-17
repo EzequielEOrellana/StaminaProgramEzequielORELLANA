@@ -1,11 +1,17 @@
 .fondoMain {
   height: 100%;
-  background-image: url(../assets/img/pexels-photo-2261484.jpeg);
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.522),
+      rgba(0, 0, 0, 1)
+    ),
+    url(../assets/img/pexels-photo-2261484.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
 
   .tituloYParrafo {
+    margin-bottom: 50px;
     .h1Index {
       color: $color-texto;
       font-size: 50px;
@@ -20,11 +26,18 @@
   }
 
   .h2Stamina {
+    display: $contenedor-flex;
     color: map-get($colors, titulo2);
     font-size: 40px;
     line-height: normal;
     text-align: justify;
-    margin: 10px 25px;
+    justify-content: center;
+  }
+
+  .segundoParrafo .staminaDefinicion {
+    display: $contenedor-flex;
+    justify-content: center;
+    text-align: justify;
   }
 }
 
@@ -37,9 +50,40 @@
 
   .formularioConsulta {
     background-color: rgb(0, 4, 52);
-    text-align: left;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 30px;
+    padding-top: 20px;
     border: 3px solid black;
     width: 300px;
+
+    .campoNombre {
+      label {
+        font-weight: 900;
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+      input {
+        width: 40vh;
+      }
+    }
+
+    .campoApellido {
+      @extend .campoNombre;
+    }
+
+    .campoCorreo {
+      @extend .campoNombre;
+
+      input {
+        width: 40vh;
+      }
+    }
+
+    .campoComentario {
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
 
     .enviar {
       background-color: #4e4caf95;
@@ -56,7 +100,7 @@
     }
 
     .enviar:hover {
-      background-color: #0f0126;
+      background-color: #148a0c;
     }
 
     .enviar:active {
@@ -192,68 +236,65 @@ label {
   }
 }
 
+/*main de planificacion*/
 
-/*main de planificacion*/ 
-
-.galeria_imagenes{
- position:relative;
-  cursor:pointer;
+.galeria_imagenes {
+  position: relative;
+  cursor: pointer;
 }
 
-.galeria_imagenes2{
-  @extend .galeria_imagenes
+.galeria_imagenes2 {
+  @extend .galeria_imagenes;
 }
 
-.galeria_imagenes3{
-  @extend .galeria_imagenes
+.galeria_imagenes3 {
+  @extend .galeria_imagenes;
 }
 
-.galeria_imagenes4{
-  @extend .galeria_imagenes
+.galeria_imagenes4 {
+  @extend .galeria_imagenes;
 }
-
-
 
 /*pseudo elemento before*/
 .galeria_imagenes::before {
-  content:"El es Ezequiel el cual realiza nuestra Panificacion para atletas que desean competir, desarrollandose como se muestra en la imagen en medio de una competencia en la categoria ADVANCE. ";
-  position:absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  background-color:#14182ba6;
+  content: "El es Ezequiel el cual realiza nuestra Panificacion para atletas que desean competir, desarrollandose como se muestra en la imagen en medio de una competencia en la categoria ADVANCE. ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #14182ba6;
   transform: scaleY(0);
-  transition: transform .4s;
-  color:white;
-  display:flex;
+  transition: transform 0.4s;
+  color: white;
+  display: flex;
   justify-content: center;
-  align-items:center ;
-  font-size:1.5rem ;
+  align-items: center;
+  font-size: 1.5rem;
   text-align: justify;
-  
 }
 
 .galeria_imagenes2::before {
-  content:"El es Gustavo el cual ademas es coach y nos elige para crecer como atleta y mejorar asi sus hbilidades en su entrenamiento diario.";}
-
-.galeria_imagenes3::before{
-  content:"El es Ari el cual realiza nuestra planificacion para Atletas, entrenando de forma individual en el box el del cual forma parte.";}
-
-.galeria_imagenes4::before{
-  content:"Te presentamos a Franco, el realiza un entrenamiento peronalizado en base a su actividad el cual es corredor de cutriciclos y logro ganar el primer puesto en su categoria tras su largo compromiso con la programación.";}
-
-
-.galeria_imagenes:hover::before{
-   transform: scaleY(1);
+  content: "El es Gustavo, el cual además es coach y nos elige para crecer como atleta y mejorar asi sus hbilidades en su entrenamiento diario.";
 }
 
+.galeria_imagenes3::before {
+  content: "El es Ari y realiza nuestra planificacion para Atletas, entrenando de forma individual en el box el del cual forma parte.";
+}
 
+.galeria_imagenes4::before {
+  content: "Te presentamos a Franco, el realiza un entrenamiento peronalizado en base a su actividad el cual es corredor de cutriciclos y logro ganar el primer puesto en su categoria tras su largo compromiso con la programación.";
+}
+
+.galeria_imagenes:hover::before {
+  transform: scaleY(1);
+}
 
 @media only screen and (max-width: 768px) {
   .fondoMain {
     .tituloYParrafo {
       .h1Index {
+        margin-top: 2em;
         text-align: center;
       }
 
@@ -278,29 +319,26 @@ label {
       margin: 20px 20px 20px 20px;
     }
 
-    .cards{
-
+    .cards {
       margin-top: 30px;
       margin-bottom: 500px;
 
-      .h1Cards{
+      .h1Cards {
         align-items: start;
         margin-bottom: 500px;
       }
 
-      .cardsPadre{
-        display:flex;
-        flex-direction:column;
-        
-        .cardsHijo{
+      .cardsPadre {
+        display: flex;
+        flex-direction: column;
+
+        .cardsHijo {
           width: 100%;
           height: auto;
           display: flex;
           justify-content: center;
-
         }
       }
     }
-
   }
 }
