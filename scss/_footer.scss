@@ -16,19 +16,25 @@
       color: map-get($colors, redes);
       font-size: 40px;
       text-decoration: none;
+      position: relative;
+      transition: all 0.3s ease;
+      animation: up-down 2s ease-in-out infinite;
+    }
+
+    i{
+      transition: all 0.3s ease;
     }
   }
 }
 
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(-10px);
   }
-}
-
-.icon-container i {
-  animation: spin 8s linear infinite;
+  100% {
+    transform: translateY(0);
+  }
 }

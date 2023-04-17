@@ -1,87 +1,85 @@
-
-.colorHeaderPrincipal{
-    width: 100%;
-    height: 10%;
+.colorHeaderPrincipal {
+  width: 100%;
+  height: 10%;
   background-image: url(../assets/img/logo\ stamina.jpeg);
-  background-repeat:no-repeat;
-  background-size:cover; 
-  display:$contenedor-flex;  
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: $contenedor-flex;
   position: absolute;
-  
-  .contenedorLogo{
-    .logo{
-        width: 70px;
-        height: 10vh;
 
-        }
-    
-     }
-  
+  .contenedorLogo {
+    .logo {
+      width: 70px;
+      height: 10vh;
+    }
   }
+}
 
-  .listaNavegacion{
-    text-align: right;
-    display: inline-block;
-   color: map-get($colors, items);
-   padding:10px 30px;
-    list-style: none;
+.listaNavegacion {
+  text-align: right;
+  display: inline-block;
+  color: map-get($colors, items);
+  padding: 10px 30px;
+  list-style: none;
 
-    .linkNav{
-        display: $contenedor-flex;
-        align-items:start;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        text-decoration: none;
-        color: map-get($colors, link);
-        font-size: 20px;
-        margin:-1%  20px auto;
+  .linkNav {
+    display: $contenedor-flex;
+    align-items: start;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: map-get($colors, link);
+    font-size: 20px;
+    margin: -1% 20px auto;
+  }
+}
+
+.miniTitulo {
+  margin-top: 15px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .colorHeaderPrincipal {
+    display: flex;
+    align-items: self-start;
+    justify-content: flex-end;
+    text-align: justify;
+    height: 11.5%;
+    position: relative;
+   
+
+    .listaNavegacion {
+      overflow: hidden;
+      align-items: center;
+    
+      .colorNav {
+        display: inline;
+     
       }
-  
+    }
+  }
+  .navbar {
     
-  }
-  
-
-  .miniTitulo{
-    margin-top: 15px;
-    text-align: center; 
+    width: 100%;
   }
 
+  .navList {
+    position:static;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    padding-right: 3em;
 
+   
+   
 
-  @media only screen and (max-width: 768px) {
-
-    .colorHeaderPrincipal{
-      display: flex;
-      align-items:self-start;
-      justify-content:center;
-      height: 11.5%;
+    .linkNav {
       width: 100%;
-      
-      .colorNav{
-        color: rgba(0, 0, 0, 0.586);
-     } 
-
-     .listaNavegacion{
-      margin-top: 0%;
-      position: static;
-      
-
+      justify-content: center;
+     font-size: 18px;
+     font-weight: 700;
+      margin-top: 15px;
+      overflow:visible;
+    }
   }
-    
-    }
-    .navbar{
-      flex-direction: row-reverse;
-      justify-items: left;
-    
-      background-image: url(../assets/img/logo\ stamina.jpeg);
-      
-    }
-
-    .navList{
-      align-items: end;
-      bottom: 0;
-    }
-    
-
-  }
-
-  
+}

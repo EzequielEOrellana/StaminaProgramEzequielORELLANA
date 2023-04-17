@@ -50,6 +50,19 @@ body {
   transform: scale(1.1);
 }
 
+/*clases de footer*/
+.instagram {
+  color: #E4405F;
+}
+
+.facebook {
+  color: blue;
+}
+
+.twitter {
+  color: cadetblue;
+}
+
 @media only screen and (max-width: 768px) {
   .imagenes3 {
     display: flex;
@@ -96,33 +109,46 @@ body {
   .colorHeaderPrincipal {
     display: flex;
     align-items: self-start;
-    justify-content: center;
+    justify-content: flex-end;
+    text-align: justify;
     height: 11.5%;
-    width: 100%;
-  }
-  .colorHeaderPrincipal .colorNav {
-    color: rgba(0, 0, 0, 0.586);
+    position: relative;
   }
   .colorHeaderPrincipal .listaNavegacion {
-    margin-top: 0%;
-    position: static;
+    overflow: hidden;
+    align-items: center;
+  }
+  .colorHeaderPrincipal .listaNavegacion .colorNav {
+    display: inline;
   }
   .navbar {
-    flex-direction: row-reverse;
-    justify-items: left;
-    background-image: url(../assets/img/logo\ stamina.jpeg);
+    width: 100%;
   }
   .navList {
-    align-items: end;
-    bottom: 0;
+    position: static;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    padding-right: 3em;
+  }
+  .navList .linkNav {
+    width: 100%;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 15px;
+    overflow: visible;
   }
 }
 .fondoMain {
   height: 100%;
-  background-image: url(../assets/img/pexels-photo-2261484.jpeg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.522), rgb(0, 0, 0)), url(../assets/img/pexels-photo-2261484.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+}
+.fondoMain .tituloYParrafo {
+  margin-bottom: 50px;
 }
 .fondoMain .tituloYParrafo .h1Index {
   color: aliceblue;
@@ -136,11 +162,17 @@ body {
   justify-content: center;
 }
 .fondoMain .h2Stamina {
+  display: flex;
   color: rgb(250, 251, 252);
   font-size: 40px;
   line-height: normal;
   text-align: justify;
-  margin: 10px 25px;
+  justify-content: center;
+}
+.fondoMain .segundoParrafo .staminaDefinicion {
+  display: flex;
+  justify-content: center;
+  text-align: justify;
 }
 
 /* main del contacto*/
@@ -151,9 +183,27 @@ body {
 }
 .formularioUbicacion .formularioConsulta {
   background-color: rgb(0, 4, 52);
-  text-align: left;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 30px;
+  padding-top: 20px;
   border: 3px solid black;
   width: 300px;
+}
+.formularioUbicacion .formularioConsulta .campoNombre label, .formularioUbicacion .formularioConsulta .campoCorreo label, .formularioUbicacion .formularioConsulta .campoApellido label {
+  font-weight: 900;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.formularioUbicacion .formularioConsulta .campoNombre input, .formularioUbicacion .formularioConsulta .campoCorreo input, .formularioUbicacion .formularioConsulta .campoApellido input {
+  width: 40vh;
+}
+.formularioUbicacion .formularioConsulta .campoCorreo input {
+  width: 40vh;
+}
+.formularioUbicacion .formularioConsulta .campoComentario {
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 .formularioUbicacion .formularioConsulta .enviar {
   background-color: rgba(78, 76, 175, 0.5843137255);
@@ -169,7 +219,7 @@ body {
   border-radius: 10px;
 }
 .formularioUbicacion .formularioConsulta .enviar:hover {
-  background-color: #0f0126;
+  background-color: #148a0c;
 }
 .formularioUbicacion .formularioConsulta .enviar:active {
   transform: scale(1.05);
@@ -293,11 +343,11 @@ label {
 }
 
 .galeria_imagenes2::before {
-  content: "El es Gustavo el cual ademas es coach y nos elige para crecer como atleta y mejorar asi sus hbilidades en su entrenamiento diario.";
+  content: "El es Gustavo, el cual además es coach y nos elige para crecer como atleta y mejorar asi sus hbilidades en su entrenamiento diario.";
 }
 
 .galeria_imagenes3::before {
-  content: "El es Ari el cual realiza nuestra planificacion para Atletas, entrenando de forma individual en el box el del cual forma parte.";
+  content: "El es Ari y realiza nuestra planificacion para Atletas, entrenando de forma individual en el box el del cual forma parte.";
 }
 
 .galeria_imagenes4::before {
@@ -310,6 +360,7 @@ label {
 
 @media only screen and (max-width: 768px) {
   .fondoMain .tituloYParrafo .h1Index {
+    margin-top: 2em;
     text-align: center;
   }
   .fondoMain .tituloYParrafo .segundoParrafo .h2Stamina {
@@ -365,16 +416,22 @@ label {
   color: brown;
   font-size: 40px;
   text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+  animation: up-down 2s ease-in-out infinite;
+}
+.footerIndex .divFooterIndex i {
+  transition: all 0.3s ease;
 }
 
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(-10px);
   }
-}
-.icon-container i {
-  animation: spin 8s linear infinite;
+  100% {
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=style.css.map */
