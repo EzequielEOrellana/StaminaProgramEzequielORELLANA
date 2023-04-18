@@ -5,7 +5,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: $contenedor-flex;
-  position: absolute;
+  position:fixed;
+  z-index: 1;
+
 
   .contenedorLogo {
     .logo {
@@ -21,6 +23,7 @@
   color: map-get($colors, items);
   padding: 10px 30px;
   list-style: none;
+ 
 
   .linkNav {
     display: $contenedor-flex;
