@@ -16,9 +16,9 @@
       color: $color-texto;
       font-size: 50px;
       line-height: normal;
-      margin: 20px 20px;
       margin-top: 60px;
       margin-bottom: 2px;
+      padding-top: 20px;
       display: $contenedor-flex;
       font-weight: 900;
       justify-content: center;
@@ -35,13 +35,37 @@
   }
 
   .segundoParrafo .staminaDefinicion {
+    font-size: 18px;
     display: $contenedor-flex;
     justify-content: center;
     text-align: justify;
   }
 }
 
+/*main de atletas*/
+
+
+.h1IndexAtletas{
+  color: $color-texto;
+  font-size: 50px;
+  line-height: normal;
+  margin-top: 60px;
+  margin-bottom: 2px;
+  padding-top: 20px;
+  display: $contenedor-flex;
+  font-weight: 900;
+  justify-content: center;
+ 
+}
+
 /* main del contacto*/
+
+.parrafoContacto{
+  @extend .staminaDefinicion;
+  text-align: justify;
+  font-size: 20px;
+  margin: 20px 40px 5px 40px;
+}
 
 .formularioUbicacion {
   display: $contenedor-flex;
@@ -56,6 +80,7 @@
     padding-top: 20px;
     border: 3px solid black;
     width: 300px;
+
 
     .campoNombre {
       label {
@@ -118,7 +143,7 @@ label {
 .h1staff {
   color: $color-texto;
   font-size: 50px;
-  padding: 60px;
+  padding: 80px;
   text-align: center;
   font-weight: 900;
 }
@@ -182,15 +207,17 @@ label {
       rgba(23, 28, 39, 0.79) 80%
     );
     color: $color-texto;
-    font-size: large;
+    font-size: 20px;
     line-height: normal;
     text-align: justify;
     margin: 50px 25px;
     margin-top: 20px;
+   
   }
 }
 
 .cards {
+  padding-top: 30px;
   .h1Cards {
     text-align: center;
     font-size: 40px;
@@ -227,9 +254,12 @@ label {
       .h2Cards {
         text-align: center;
         color: $color-texto;
+        z-index: 1;
       }
       .parrafoCards {
+        margin: 5px 5px  5px 5px;
         margin-bottom: 0%;
+        text-align: justify;
         color: $color-texto;
       }
     }
@@ -239,8 +269,9 @@ label {
 /*main de planificacion*/
 
 .galeria_imagenes {
-  position: relative;
+  position:relative;
   cursor: pointer;
+  
 }
 
 .galeria_imagenes2 {
@@ -293,8 +324,8 @@ label {
 @media only screen and (max-width: 768px) {
   .fondoMain {
     .tituloYParrafo {
-      .h1Index {
-        margin-top: 2em;
+      .h1Index , .h1IndexAtletas {
+        margin-top: 1em;
         text-align: center;
       }
 
@@ -317,6 +348,11 @@ label {
     .textoFoto {
       flex-direction: column;
       margin: 20px 20px 20px 20px;
+    }
+
+    .parrafoPlanificacion{
+      margin-top: 30px;
+     
     }
 
     .cards {
