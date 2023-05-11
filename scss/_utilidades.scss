@@ -79,6 +79,29 @@ body{
   color: cadetblue;
 }
 
+.whatsapp, .whatsapp-float  {
+  height: 90px;
+  font-size: 40px;
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  z-index: 99;
+  animation: whatsapp-float 2s ease-in-out infinite;
+  color: green;
+}
+
+@keyframes whatsapp-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+ 
 
 
    @media only screen and (max-width: 768px){
